@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Customer insights</h1>
+  <p>What the training data says about who buys, and the customer segments found by clustering.</p>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><b>{{ '{:,}'.format(d.kpis.customers) }}</b><span>Customers</span></div>
+  <div class="kpi"><b>{{ d.kpis.purchase_rate }}%</b><span>Purchase rate</span></div>
+  <div class="kpi"><b>₹{{ '{:,}'.format(d.kpis.avg_income) }}</b><span>Average income</span></div>
+  <div class="kpi"><b>{{ d.kpis.avg_age }}</b><span>Average age</span></div>
+  <div class="kpi"><b>{{ d.kpis.avg_browsing }} min</b><span>Average browsing</span></div>
+</div>
+
+<div class="charts">
+  <div class="card"><h3>Purchase rate by age group</h3><div class="chart"><canvas id="c-age"></canvas></div></div>
+  <div class="card"><h3>Purchase rate by income</h3><div class="chart"><canvas id="c-income"></canvas></div></div>
+  <div class="card"><h3>Purchase rate by browsing time</h3><div class="chart"><canvas id="c-browsing"></canvas></div></div>
+  <div class="card"><h3>Purchase rate by number of visits</h3><div class="chart"><canvas id="c-visits"></canvas></div></div>
+  <div class="card"><h3>Previous purchase</h3><div class="chart"><canvas id="c-previous"></canvas></div></div>
+  <div class="card"><h3>Gender</h3><div class="chart"><canvas id="c-gender"></canvas></div></div>
+</div>
+
+<h2 class="section">Customer segments</h2>
+<p class="muted">K-Means clustering groups customers by age, income, browsing time and visits. Segments are named by their purchase rate.</p>
+<div class="card scroll">
+  <table>
+    <thead><tr><th>Segment</th><th>Profile</th><th class="n">Customers</th><th class="n">Purchase rate</th><th class="n">Avg income</th><th class="n">Avg browsing</th><th class="n">Avg visits</th><th class="n">Repeat buyers</th></tr></thead>
+    <tbody>
+      {% for s in d.segments %}
+      <tr>
+        <td><strong>{{ s.name }}</strong></td><td>{{ s.description }}</td>
+        <td class="n">{{ s.size }} ({{ s.share }}%)</td><td class="n">{{ s.purchase_rate }}%</td>
+        <td class="n">₹{{ '{:,}'.format(s.avg_income) }}</td><td class="n">{{ s.avg_browsing }} min</td>
+        <td class="n">{{ s.avg_visits }}</td><td class="n">{{ s.repeat_pct }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="card"><h3>Segments by income and browsing time</h3><div class="chart tall"><canvas id="c-seg"></canvas></div></div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='vendor/chart.umd.js') }}"></script>
+<script>
+const D = {{ d|tojson }};
+const COLORS = ["#1f5f8b", "#1e7a4c", "#c27d12", "#b3402f"];
+Chart.defaults.font.family = '"Segoe UI", system-ui, sans-serif';
+Chart.defaults.color = "#5b6b7b";
+
+function bar(id, o, color) {
+  new Chart(document.getElementById(id), {
+    type: "bar",
+    data: { labels: o.labels, datasets: [{ data: o.values, backgroundColor: color, borderRadius: 4 }] },
+    options: {
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: {
+        label: function (c) { return c.parsed.y + "% purchased (" + o.counts[c.dataIndex] + " customers)"; } } } },
+      scales: { y: { beginAtZero: true, max: 100, ticks: { callback: function (v) { return v + "%"; } } } }
+    }
+  });
+}
+bar("c-age", D.age, COLORS[0]);
+bar("c-income", D.income, COLORS[0]);
+bar("c-browsing", D.browsing, COLORS[0]);
+bar("c-visits", D.visits, COLORS[0]);
+bar("c-previous", D.previous, COLORS[1]);
+bar("c-gender", D.gender, COLORS[2]);
+
+const names = D.segments.map(function (s) { return s.name; });
+new Chart(document.getElementById("c-seg"), {
+  type: "scatter",
+  data: { datasets: names.map(function (n, i) {
+    return { label: n, backgroundColor: COLORS[i], pointRadius: 4,
+      data: D.scatter.filter(function (p) { return p.s === n; }).map(function (p) { return { x: p.x, y: p.y }; }) };
+  }) },
+  options: { maintainAspectRatio: false,
+    scales: { x: { title: { display: true, text: "Income (₹)" } }, y: { title: { display: true, text: "Browsing time (min)" } } } }
+});
+</script>
+{% endblock %}

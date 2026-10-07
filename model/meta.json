@@ -1,0 +1,10 @@
+{
+  "baselines": {
+    "Age": 42.0,
+    "Income": 55300.0,
+    "Browsing_Time": 15.05,
+    "Num_Visits": 6.0,
+    "Gender": "Female",
+    "Previous_Purchase": "No"
+  }
+}

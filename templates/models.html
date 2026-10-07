@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Models{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Model comparison</h1>
+  <p>Three classifiers were tuned with grid search and 5-fold cross-validation, then scored on {{ m.split.test }} unseen customers.</p>
+</div>
+
+<div class="card scroll">
+  <table>
+    <thead><tr><th>Model</th><th class="n">Accuracy</th><th class="n">Precision</th><th class="n">Recall</th><th class="n">F1</th><th class="n">ROC-AUC</th><th class="n">CV AUC (mean ± sd)</th><th>Best parameters</th></tr></thead>
+    <tbody>
+      {% for x in m.models %}
+      <tr class="{{ 'best' if x.name == m.best }}">
+        <td><strong>{{ x.name }}</strong>{% if x.name == m.best %} <span class="pill">Selected</span>{% endif %}</td>
+        <td class="n">{{ '%.1f'|format(x.accuracy * 100) }}%</td><td class="n">{{ '%.1f'|format(x.precision * 100) }}%</td>
+        <td class="n">{{ '%.1f'|format(x.recall * 100) }}%</td><td class="n">{{ '%.3f'|format(x.f1) }}</td>
+        <td class="n">{{ '%.3f'|format(x.roc_auc) }}</td><td class="n">{{ '%.3f'|format(x.cv_auc_mean) }} ± {{ '%.3f'|format(x.cv_auc_std) }}</td>
+        <td class="small">{% for k, v in x.best_params.items() %}{{ k }}={{ v }}{{ ', ' if not loop.last }}{% endfor %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="muted small">The selected model has the highest cross-validated ROC-AUC. The choice is made on the training data only, so the test set stays unseen.</p>
+
+<div class="charts two">
+  <div class="card"><h3>ROC curves</h3><div class="chart tall"><canvas id="c-roc"></canvas></div></div>
+  <div class="card"><h3>What drives the model</h3>
+    <p class="muted small">Permutation importance: how much ROC-AUC drops when a feature is shuffled.</p>
+    <div class="chart"><canvas id="c-imp"></canvas></div></div>
+</div>
+
+<h2 class="section">Confusion matrices</h2>
+<div class="cms">
+  {% for x in m.models %}
+  <div class="card">
+    <h3>{{ x.name }}</h3>
+    <div class="cm">
+      <span></span><span class="h">Predicted No</span><span class="h">Predicted Yes</span>
+      <span class="h">Actual No</span><span class="ok">{{ x.confusion.tn }}</span><span class="bad">{{ x.confusion.fp }}</span>
+      <span class="h">Actual Yes</span><span class="bad">{{ x.confusion.fn }}</span><span class="ok">{{ x.confusion.tp }}</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='vendor/chart.umd.js') }}"></script>
+<script>
+const M = {{ m|tojson }};
+const COLORS = ["#1f5f8b", "#1e7a4c", "#c27d12", "#b3402f"];
+Chart.defaults.font.family = '"Segoe UI", system-ui, sans-serif';
+Chart.defaults.color = "#5b6b7b";
+
+const sets = M.models.map(function (x, i) {
+  return { label: x.name + " (AUC " + x.roc_auc.toFixed(2) + ")", borderColor: COLORS[i], backgroundColor: COLORS[i],
+    showLine: true, pointRadius: 0, borderWidth: 2,
+    data: x.roc.fpr.map(function (f, j) { return { x: f, y: x.roc.tpr[j] }; }) };
+});
+sets.push({ label: "Chance", borderColor: "#9aa7b4", borderDash: [5, 5], showLine: true, pointRadius: 0, borderWidth: 1,
+  data: [{ x: 0, y: 0 }, { x: 1, y: 1 }] });
+new Chart(document.getElementById("c-roc"), { type: "scatter", data: { datasets: sets },
+  options: { maintainAspectRatio: false, scales: {
+    x: { min: 0, max: 1, title: { display: true, text: "False positive rate" } },
+    y: { min: 0, max: 1, title: { display: true, text: "True positive rate" } } } } });
+
+new Chart(document.getElementById("c-imp"), { type: "bar",
+  data: { labels: M.importance.map(function (i) { return i.feature; }),
+    datasets: [{ data: M.importance.map(function (i) { return i.importance; }), backgroundColor: COLORS[0], borderRadius: 4 }] },
+  options: { indexAxis: "y", maintainAspectRatio: false, plugins: { legend: { display: false } } } });
+</script>
+{% endblock %}

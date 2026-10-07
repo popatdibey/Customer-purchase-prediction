@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}History{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Prediction history</h1>
+  <p>Every prediction made from the form or the API is saved in a local SQLite database.</p>
+</div>
+<div class="kpis">
+  <div class="kpi"><b>{{ stats.total }}</b><span>Predictions made</span></div>
+  <div class="kpi"><b>{{ stats.likely_pct }}%</b><span>Predicted to purchase</span></div>
+  <div class="kpi"><b>{{ stats.avg_prob }}%</b><span>Average probability</span></div>
+</div>
+{% if rows %}
+<div class="actions">
+  <a class="btn inline" href="{{ url_for('history_export') }}">Export CSV</a>
+  <form method="post" action="{{ url_for('history_clear') }}" onsubmit="return confirm('Delete all saved predictions?');"><button class="btn ghost" type="submit">Clear history</button></form>
+</div>
+<div class="card scroll">
+  <table>
+    <thead><tr><th>Time (UTC)</th><th>Source</th><th class="n">Age</th><th>Gender</th><th class="n">Income</th><th class="n">Browsing</th><th>Prev.</th><th class="n">Visits</th><th class="n">Probability</th><th>Result</th><th>Segment</th></tr></thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r.created_at }}</td><td>{{ r.source }}</td><td class="n">{{ r.age }}</td><td>{{ r.gender }}</td>
+        <td class="n">₹{{ '{:,.0f}'.format(r.income) }}</td><td class="n">{{ r.browsing_time }} min</td><td>{{ r.previous_purchase }}</td>
+        <td class="n">{{ r.num_visits }}</td><td class="n">{{ r.probability }}%</td>
+        <td><span class="tag {{ 'yes' if r.prediction == 'Likely' else 'no' }}">{{ r.prediction }}</span></td><td>{{ r.segment }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="card placeholder"><h3>No predictions yet</h3><p class="muted">Make a prediction on the <a href="{{ url_for('index') }}">Predict</a> page and it will show up here.</p></div>
+{% endif %}
+{% endblock %}

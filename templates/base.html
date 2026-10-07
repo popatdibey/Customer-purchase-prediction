@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %} · Purchase Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap bar">
+      <a class="brand" href="{{ url_for('index') }}">Purchase Predictor</a>
+      <nav aria-label="Main">
+        {% for ep, label in [('index','Predict'),('batch','Batch'),('dashboard','Dashboard'),('models','Models'),('history','History'),('about','About')] %}
+        <a href="{{ url_for(ep) }}" class="{{ 'on' if request.endpoint == ep or (ep == 'batch' and request.endpoint == 'batch_download') }}">{{ label }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">{% block content %}{% endblock %}</main>
+  <footer class="wrap foot">Active model: {{ best_model.name }} · test accuracy {{ best_model.accuracy }}%</footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

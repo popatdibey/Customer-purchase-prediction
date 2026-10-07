@@ -1,0 +1,54 @@
+{
+  "0": {
+    "id": 0,
+    "name": "Engaged Prospects",
+    "description": "Frequent visitors, longer sessions",
+    "size": 421,
+    "share": 21.1,
+    "purchase_rate": 57.5,
+    "avg_age": 40.8,
+    "avg_income": 55331,
+    "avg_browsing": 16.8,
+    "avg_visits": 9.4,
+    "repeat_pct": 36.1
+  },
+  "1": {
+    "id": 1,
+    "name": "Casual Browsers",
+    "description": "Older, shorter sessions",
+    "size": 580,
+    "share": 29.0,
+    "purchase_rate": 51.7,
+    "avg_age": 55.7,
+    "avg_income": 52665,
+    "avg_browsing": 11.2,
+    "avg_visits": 5.3,
+    "repeat_pct": 40.9
+  },
+  "2": {
+    "id": 2,
+    "name": "High-Intent Buyers",
+    "description": "Longer sessions, infrequent visitors",
+    "size": 473,
+    "share": 23.6,
+    "purchase_rate": 66.0,
+    "avg_age": 39.2,
+    "avg_income": 64036,
+    "avg_browsing": 23.5,
+    "avg_visits": 4.6,
+    "repeat_pct": 41.2
+  },
+  "3": {
+    "id": 3,
+    "name": "Window Shoppers",
+    "description": "Younger, shorter sessions",
+    "size": 526,
+    "share": 26.3,
+    "purchase_rate": 31.2,
+    "avg_age": 28.4,
+    "avg_income": 51264,
+    "avg_browsing": 10.9,
+    "avg_visits": 5.5,
+    "repeat_pct": 40.5
+  }
+}

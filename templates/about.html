@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>About this project</h1>
+  <p>A machine learning application that predicts whether a customer will purchase, explains the prediction and groups customers into segments.</p>
+</div>
+
+<h2 class="section">How it works</h2>
+<ol class="flow">
+  <li><strong>Data collection</strong> A customer dataset (CSV) with demographics, browsing behaviour and purchase history.</li>
+  <li><strong>Preprocessing</strong> Missing values are imputed, categories are one-hot encoded and numbers are scaled, all inside one scikit-learn pipeline.</li>
+  <li><strong>Exploratory analysis</strong> Purchase rates by age, income, browsing time and visits, shown on the Dashboard.</li>
+  <li><strong>Model training</strong> Logistic Regression, Decision Tree and Random Forest, tuned with grid search and 5-fold cross-validation.</li>
+  <li><strong>Evaluation</strong> Accuracy, precision, recall, F1, ROC-AUC and confusion matrices on a held-out 20% test set.</li>
+  <li><strong>Deployment</strong> The best model is saved with Joblib and served through Flask.</li>
+</ol>
+
+<h2 class="section">Modules</h2>
+<div class="charts two">
+  <div class="card"><h3>Single prediction</h3><p class="muted">Probability, segment and recommended action for one customer.</p></div>
+  <div class="card"><h3>Explainable AI</h3><p class="muted">A model-agnostic explanation shows which features pushed the probability up or down.</p></div>
+  <div class="card"><h3>Customer segmentation</h3><p class="muted">K-Means clustering groups customers into four behavioural segments.</p></div>
+  <div class="card"><h3>Batch scoring</h3><p class="muted">Upload a CSV, score every customer and download the results.</p></div>
+  <div class="card"><h3>Analytics dashboard</h3><p class="muted">Purchase patterns and segment profiles drawn with Chart.js.</p></div>
+  <div class="card"><h3>Prediction history</h3><p class="muted">Every prediction is logged in SQLite and can be exported.</p></div>
+  <div class="card"><h3>REST API</h3><p class="muted"><code>POST /api/predict</code> with JSON returns the prediction, factors and advice.</p></div>
+  <div class="card"><h3>Model comparison</h3><p class="muted">Side-by-side metrics, ROC curves, confusion matrices and feature importance.</p></div>
+</div>
+
+<h2 class="section">Technology</h2>
+<p>Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Flask, SQLite, Chart.js, HTML and CSS.</p>
+
+<h2 class="section">Limitations and future scope</h2>
+<p class="muted">Predictions are only as good as the training data, so the model should be retrained on fresh customer records regularly. Future work could add live retraining from uploaded data, more features such as product category and device, and A/B testing of the recommended actions.</p>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Batch{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Score many customers at once</h1>
+  <p>Upload a CSV and get a probability, priority and segment for every row, ready to download.</p>
+</div>
+
+<form method="post" enctype="multipart/form-data" class="card upload">
+  <label>CSV file
+    <input type="file" name="file" accept=".csv" required>
+  </label>
+  <button type="submit" class="btn">Score customers</button>
+</form>
+<p class="muted small">Required columns: Age, Gender, Income, Browsing_Time, Previous_Purchase, Num_Visits. Other columns such as Customer_ID are kept. <a href="{{ url_for('batch_template') }}">Download a template</a></p>
+{% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+
+{% if summary %}
+<div class="kpis">
+  <div class="kpi"><b>{{ summary.rows }}</b><span>Customers scored</span></div>
+  <div class="kpi"><b>{{ summary.likely }}</b><span>Likely to purchase</span></div>
+  <div class="kpi"><b>{{ summary.hot }}</b><span>Hot leads</span></div>
+  <div class="kpi"><b>{{ summary.avg }}%</b><span>Average probability</span></div>
+</div>
+{% if summary.skipped %}<p class="muted">{{ summary.skipped }} row(s) were skipped because of invalid values.</p>{% endif %}
+<p><a class="btn inline" href="{{ url_for('batch_download', rid=summary.rid) }}">Download full results (CSV)</a></p>
+<p class="muted small">Segments: {% for k, v in summary.segments.items() %}{{ k }} {{ v }}{{ ' · ' if not loop.last }}{% endfor %}</p>
+<div class="card scroll">
+  <table>
+    <thead><tr>{% for c in summary.columns %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+    <tbody>{% for r in summary.preview %}<tr>{% for v in r %}<td>{{ v }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+  </table>
+</div>
+<p class="muted small">Showing the first {{ summary.preview|length }} rows.</p>
+{% endif %}
+{% endblock %}

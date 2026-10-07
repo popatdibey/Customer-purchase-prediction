@@ -1,0 +1,1929 @@
+{
+  "kpis": {
+    "customers": 2000,
+    "purchase_rate": 50.9,
+    "avg_income": 55537,
+    "avg_age": 41.5,
+    "avg_browsing": 15.2
+  },
+  "age": {
+    "labels": [
+      "up to 25",
+      "26-35",
+      "36-45",
+      "46-55",
+      "56+"
+    ],
+    "values": [
+      42.3,
+      40.1,
+      53.1,
+      56.4,
+      61.0
+    ],
+    "counts": [
+      359,
+      382,
+      418,
+      408,
+      418
+    ]
+  },
+  "income": {
+    "labels": [
+      "<30k",
+      "30-50k",
+      "50-70k",
+      "70-90k",
+      "90k+"
+    ],
+    "values": [
+      23.4,
+      39.3,
+      53.7,
+      71.1,
+      81.4
+    ],
+    "counts": [
+      209,
+      572,
+      751,
+      367,
+      86
+    ]
+  },
+  "visits": {
+    "labels": [
+      "1-3",
+      "4-6",
+      "7-9",
+      "10+"
+    ],
+    "values": [
+      43.0,
+      49.2,
+      56.0,
+      54.9
+    ],
+    "counts": [
+      286,
+      925,
+      616,
+      173
+    ]
+  },
+  "browsing": {
+    "labels": [
+      "<8 min",
+      "8-15",
+      "15-25",
+      "25+ min"
+    ],
+    "values": [
+      35.3,
+      44.7,
+      57.9,
+      71.1
+    ],
+    "counts": [
+      368,
+      611,
+      802,
+      204
+    ]
+  },
+  "previous": {
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "values": [
+      40.6,
+      66.4
+    ],
+    "counts": [
+      1203,
+      797
+    ]
+  },
+  "gender": {
+    "labels": [
+      "Female",
+      "Male"
+    ],
+    "values": [
+      53.4,
+      48.4
+    ],
+    "counts": [
+      992,
+      1008
+    ]
+  },
+  "segments": [
+    {
+      "id": 3,
+      "name": "Window Shoppers",
+      "description": "Younger, shorter sessions",
+      "size": 526,
+      "share": 26.3,
+      "purchase_rate": 31.2,
+      "avg_age": 28.4,
+      "avg_income": 51264,
+      "avg_browsing": 10.9,
+      "avg_visits": 5.5,
+      "repeat_pct": 40.5
+    },
+    {
+      "id": 1,
+      "name": "Casual Browsers",
+      "description": "Older, shorter sessions",
+      "size": 580,
+      "share": 29.0,
+      "purchase_rate": 51.7,
+      "avg_age": 55.7,
+      "avg_income": 52665,
+      "avg_browsing": 11.2,
+      "avg_visits": 5.3,
+      "repeat_pct": 40.9
+    },
+    {
+      "id": 0,
+      "name": "Engaged Prospects",
+      "description": "Frequent visitors, longer sessions",
+      "size": 421,
+      "share": 21.1,
+      "purchase_rate": 57.5,
+      "avg_age": 40.8,
+      "avg_income": 55331,
+      "avg_browsing": 16.8,
+      "avg_visits": 9.4,
+      "repeat_pct": 36.1
+    },
+    {
+      "id": 2,
+      "name": "High-Intent Buyers",
+      "description": "Longer sessions, infrequent visitors",
+      "size": 473,
+      "share": 23.6,
+      "purchase_rate": 66.0,
+      "avg_age": 39.2,
+      "avg_income": 64036,
+      "avg_browsing": 23.5,
+      "avg_visits": 4.6,
+      "repeat_pct": 41.2
+    }
+  ],
+  "scatter": [
+    {
+      "x": 36300.0,
+      "y": 17.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 70700.0,
+      "y": 12.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 26600.0,
+      "y": 22.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 25500.0,
+      "y": 14.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 94600.0,
+      "y": 15.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 18100.0,
+      "y": 5.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 27600.0,
+      "y": 19.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 50200.0,
+      "y": 10.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 61400.0,
+      "y": 6.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 65200.0,
+      "y": 7.8,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 51600.0,
+      "y": 11.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 26900.0,
+      "y": 28.7,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 63900.0,
+      "y": 11.3,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 33300.0,
+      "y": 8.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 41400.0,
+      "y": 6.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 110300.0,
+      "y": 16.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 83700.0,
+      "y": 11.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 42300.0,
+      "y": 18.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 52500.0,
+      "y": 22.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 95600.0,
+      "y": 12.3,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 75900.0,
+      "y": 21.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 60200.0,
+      "y": 27.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 93500.0,
+      "y": 18.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 66200.0,
+      "y": 8.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 38500.0,
+      "y": 4.3,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 72100.0,
+      "y": 21.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 51700.0,
+      "y": 11.8,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 79200.0,
+      "y": 24.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 78300.0,
+      "y": 11.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 50400.0,
+      "y": 16.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 35700.0,
+      "y": 6.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 31400.0,
+      "y": 22.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 78400.0,
+      "y": 21.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 41500.0,
+      "y": 19.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 69800.0,
+      "y": 17.4,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 70000.0,
+      "y": 19.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 35000.0,
+      "y": 17.7,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 26100.0,
+      "y": 17.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 46100.0,
+      "y": 1.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 83700.0,
+      "y": 13.7,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 68800.0,
+      "y": 12.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 71400.0,
+      "y": 15.4,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 55300.0,
+      "y": 18.1,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 23400.0,
+      "y": 18.3,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 87800.0,
+      "y": 14.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 22600.0,
+      "y": 28.7,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 31200.0,
+      "y": 9.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 35100.0,
+      "y": 13.8,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 55400.0,
+      "y": 7.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 71500.0,
+      "y": 20.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 93300.0,
+      "y": 12.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 59600.0,
+      "y": 6.9,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 26200.0,
+      "y": 9.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 81700.0,
+      "y": 24.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 54200.0,
+      "y": 6.7,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 76000.0,
+      "y": 9.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 44100.0,
+      "y": 20.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 48900.0,
+      "y": 3.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 37300.0,
+      "y": 13.9,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 26900.0,
+      "y": 13.7,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 49500.0,
+      "y": 30.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 58500.0,
+      "y": 1.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 70200.0,
+      "y": 24.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 18800.0,
+      "y": 20.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 18100.0,
+      "y": 24.3,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 77500.0,
+      "y": 12.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 95600.0,
+      "y": 16.3,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 56400.0,
+      "y": 17.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 75600.0,
+      "y": 1.8,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 55700.0,
+      "y": 7.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 62500.0,
+      "y": 10.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 15000.0,
+      "y": 17.3,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 83200.0,
+      "y": 11.7,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 63000.0,
+      "y": 17.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 44500.0,
+      "y": 19.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 55300.0,
+      "y": 1.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 60000.0,
+      "y": 32.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 31000.0,
+      "y": 10.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 85400.0,
+      "y": 21.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 57100.0,
+      "y": 23.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 75400.0,
+      "y": 13.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 52200.0,
+      "y": 8.8,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 79100.0,
+      "y": 5.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 29400.0,
+      "y": 4.8,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 80200.0,
+      "y": 15.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 40100.0,
+      "y": 20.7,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 57800.0,
+      "y": 13.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 53900.0,
+      "y": 10.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 70600.0,
+      "y": 23.3,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 82400.0,
+      "y": 15.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 66100.0,
+      "y": 3.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 49800.0,
+      "y": 21.8,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 62200.0,
+      "y": 20.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 64300.0,
+      "y": 14.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 64400.0,
+      "y": 16.9,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 15000.0,
+      "y": 16.1,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 22800.0,
+      "y": 21.1,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 15000.0,
+      "y": 25.9,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 59500.0,
+      "y": 24.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 15000.0,
+      "y": 20.9,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 45800.0,
+      "y": 15.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 54400.0,
+      "y": 14.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 55200.0,
+      "y": 21.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 74500.0,
+      "y": 15.1,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 48000.0,
+      "y": 3.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 87000.0,
+      "y": 26.1,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 66900.0,
+      "y": 18.4,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 68300.0,
+      "y": 12.4,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 66300.0,
+      "y": 39.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 52600.0,
+      "y": 8.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 63100.0,
+      "y": 23.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 56600.0,
+      "y": 21.8,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 67600.0,
+      "y": 10.7,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 73700.0,
+      "y": 31.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 67000.0,
+      "y": 10.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 77800.0,
+      "y": 17.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 51900.0,
+      "y": 8.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 86300.0,
+      "y": 18.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 69600.0,
+      "y": 26.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 57300.0,
+      "y": 3.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 15000.0,
+      "y": 14.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 54800.0,
+      "y": 28.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 66700.0,
+      "y": 31.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 15000.0,
+      "y": 21.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 62900.0,
+      "y": 25.5,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 48300.0,
+      "y": 16.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 39700.0,
+      "y": 9.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 86200.0,
+      "y": 18.5,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 55900.0,
+      "y": 20.9,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 33500.0,
+      "y": 8.3,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 93900.0,
+      "y": 15.8,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 30400.0,
+      "y": 25.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 76500.0,
+      "y": 8.9,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 62300.0,
+      "y": 14.6,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 36000.0,
+      "y": 15.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 47000.0,
+      "y": 1.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 109100.0,
+      "y": 17.3,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 54200.0,
+      "y": 17.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 38900.0,
+      "y": 21.5,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 48800.0,
+      "y": 8.6,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 64800.0,
+      "y": 16.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 69400.0,
+      "y": 29.5,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 64600.0,
+      "y": 3.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 62900.0,
+      "y": 14.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 31200.0,
+      "y": 32.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 53700.0,
+      "y": 12.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 67700.0,
+      "y": 6.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 54100.0,
+      "y": 27.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 37200.0,
+      "y": 13.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 64700.0,
+      "y": 21.4,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 54100.0,
+      "y": 19.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 51100.0,
+      "y": 25.4,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 54600.0,
+      "y": 16.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 57300.0,
+      "y": 1.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 59700.0,
+      "y": 13.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 84600.0,
+      "y": 22.7,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 46200.0,
+      "y": 24.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 28700.0,
+      "y": 8.7,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 88600.0,
+      "y": 13.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 60400.0,
+      "y": 1.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 62300.0,
+      "y": 28.5,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 107100.0,
+      "y": 6.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 32800.0,
+      "y": 11.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 23100.0,
+      "y": 15.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 25500.0,
+      "y": 7.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 68200.0,
+      "y": 19.7,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 45700.0,
+      "y": 4.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 32900.0,
+      "y": 25.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 40500.0,
+      "y": 20.4,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 24300.0,
+      "y": 17.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 84600.0,
+      "y": 19.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 75400.0,
+      "y": 15.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 62000.0,
+      "y": 13.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 62600.0,
+      "y": 5.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 32000.0,
+      "y": 21.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 50100.0,
+      "y": 22.1,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 53200.0,
+      "y": 12.8,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 20500.0,
+      "y": 3.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 79800.0,
+      "y": 17.4,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 36500.0,
+      "y": 1.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 53300.0,
+      "y": 4.4,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 20300.0,
+      "y": 9.8,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 72400.0,
+      "y": 17.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 65200.0,
+      "y": 21.4,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 43500.0,
+      "y": 30.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 104900.0,
+      "y": 1.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 48500.0,
+      "y": 23.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 107500.0,
+      "y": 19.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 43600.0,
+      "y": 22.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 37900.0,
+      "y": 11.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 27400.0,
+      "y": 13.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 83500.0,
+      "y": 23.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 74300.0,
+      "y": 9.5,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 52800.0,
+      "y": 1.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 49400.0,
+      "y": 22.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 53800.0,
+      "y": 6.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 58700.0,
+      "y": 19.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 56400.0,
+      "y": 14.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 53600.0,
+      "y": 25.5,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 49700.0,
+      "y": 18.8,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 70000.0,
+      "y": 19.7,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 75000.0,
+      "y": 19.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 49500.0,
+      "y": 24.0,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 64600.0,
+      "y": 9.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 59700.0,
+      "y": 11.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 73600.0,
+      "y": 14.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 39600.0,
+      "y": 36.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 61100.0,
+      "y": 10.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 50300.0,
+      "y": 11.4,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 34800.0,
+      "y": 25.8,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 83600.0,
+      "y": 13.4,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 18600.0,
+      "y": 7.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 56300.0,
+      "y": 10.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 32200.0,
+      "y": 14.9,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 76200.0,
+      "y": 18.4,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 77900.0,
+      "y": 21.3,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 22800.0,
+      "y": 12.7,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 15000.0,
+      "y": 17.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 66200.0,
+      "y": 17.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 82700.0,
+      "y": 21.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 73700.0,
+      "y": 22.4,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 48400.0,
+      "y": 19.3,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 67700.0,
+      "y": 4.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 116800.0,
+      "y": 27.1,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 35200.0,
+      "y": 12.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 38400.0,
+      "y": 19.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 41800.0,
+      "y": 22.7,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 72900.0,
+      "y": 17.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 71900.0,
+      "y": 13.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 53100.0,
+      "y": 6.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 51500.0,
+      "y": 7.8,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 67100.0,
+      "y": 32.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 56900.0,
+      "y": 28.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 22900.0,
+      "y": 20.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 66000.0,
+      "y": 11.9,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 44700.0,
+      "y": 9.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 98200.0,
+      "y": 27.4,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 70700.0,
+      "y": 7.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 66400.0,
+      "y": 15.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 37500.0,
+      "y": 1.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 38400.0,
+      "y": 14.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 53100.0,
+      "y": 8.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 54200.0,
+      "y": 19.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 76100.0,
+      "y": 19.3,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 60100.0,
+      "y": 1.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 42300.0,
+      "y": 15.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 45100.0,
+      "y": 21.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 63900.0,
+      "y": 15.6,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 50400.0,
+      "y": 20.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 76000.0,
+      "y": 1.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 53700.0,
+      "y": 1.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 67000.0,
+      "y": 20.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 27600.0,
+      "y": 16.8,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 47600.0,
+      "y": 21.3,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 59300.0,
+      "y": 9.3,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 55700.0,
+      "y": 19.1,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 70400.0,
+      "y": 27.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 36100.0,
+      "y": 5.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 39800.0,
+      "y": 7.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 53800.0,
+      "y": 3.3,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 57700.0,
+      "y": 12.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 23900.0,
+      "y": 5.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 63000.0,
+      "y": 11.8,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 51900.0,
+      "y": 19.8,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 61200.0,
+      "y": 7.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 73500.0,
+      "y": 15.7,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 34000.0,
+      "y": 8.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 70000.0,
+      "y": 1.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 69400.0,
+      "y": 6.8,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 41700.0,
+      "y": 14.7,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 26900.0,
+      "y": 15.6,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 23000.0,
+      "y": 16.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 67400.0,
+      "y": 26.7,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 47500.0,
+      "y": 18.7,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 53200.0,
+      "y": 16.8,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 71500.0,
+      "y": 22.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 18000.0,
+      "y": 2.7,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 69100.0,
+      "y": 8.0,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 33400.0,
+      "y": 17.5,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 21400.0,
+      "y": 23.0,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 69500.0,
+      "y": 14.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 32400.0,
+      "y": 1.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 42600.0,
+      "y": 6.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 86500.0,
+      "y": 1.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 71400.0,
+      "y": 5.5,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 66000.0,
+      "y": 32.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 31200.0,
+      "y": 5.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 82000.0,
+      "y": 7.8,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 32500.0,
+      "y": 15.5,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 64100.0,
+      "y": 6.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 37000.0,
+      "y": 29.7,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 59800.0,
+      "y": 7.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 58600.0,
+      "y": 12.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 29700.0,
+      "y": 17.9,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 60500.0,
+      "y": 22.2,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 67800.0,
+      "y": 2.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 37500.0,
+      "y": 3.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 69100.0,
+      "y": 1.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 64800.0,
+      "y": 10.6,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 73200.0,
+      "y": 29.8,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 74300.0,
+      "y": 8.4,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 59100.0,
+      "y": 19.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 57600.0,
+      "y": 4.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 73600.0,
+      "y": 18.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 42100.0,
+      "y": 18.9,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 70200.0,
+      "y": 21.1,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 44500.0,
+      "y": 12.6,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 87500.0,
+      "y": 14.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 54800.0,
+      "y": 15.6,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 59700.0,
+      "y": 17.9,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 58000.0,
+      "y": 18.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 42000.0,
+      "y": 28.4,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 59000.0,
+      "y": 3.3,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 15000.0,
+      "y": 11.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 57100.0,
+      "y": 19.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 89500.0,
+      "y": 32.9,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 64700.0,
+      "y": 24.3,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 47600.0,
+      "y": 24.0,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 49300.0,
+      "y": 10.0,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 53300.0,
+      "y": 12.2,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 20700.0,
+      "y": 10.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 53900.0,
+      "y": 11.0,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 42500.0,
+      "y": 4.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 38200.0,
+      "y": 21.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 20800.0,
+      "y": 1.1,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 59200.0,
+      "y": 18.1,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 70800.0,
+      "y": 15.3,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 38400.0,
+      "y": 18.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 25600.0,
+      "y": 2.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 38600.0,
+      "y": 9.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 60700.0,
+      "y": 17.6,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 73900.0,
+      "y": 9.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 76200.0,
+      "y": 22.5,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 79000.0,
+      "y": 6.0,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 55900.0,
+      "y": 7.7,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 39200.0,
+      "y": 32.6,
+      "s": "High-Intent Buyers"
+    },
+    {
+      "x": 57800.0,
+      "y": 11.3,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 72200.0,
+      "y": 11.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 20800.0,
+      "y": 19.7,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 68300.0,
+      "y": 11.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 70800.0,
+      "y": 11.2,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 64200.0,
+      "y": 12.6,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 36700.0,
+      "y": 4.5,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 45100.0,
+      "y": 15.0,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 39700.0,
+      "y": 11.5,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 33900.0,
+      "y": 19.2,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 39600.0,
+      "y": 19.3,
+      "s": "Engaged Prospects"
+    },
+    {
+      "x": 59800.0,
+      "y": 4.6,
+      "s": "Casual Browsers"
+    },
+    {
+      "x": 72400.0,
+      "y": 7.7,
+      "s": "Window Shoppers"
+    },
+    {
+      "x": 68000.0,
+      "y": 13.4,
+      "s": "Casual Browsers"
+    }
+  ]
+}

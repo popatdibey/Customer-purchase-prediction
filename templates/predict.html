@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}Predict{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Will this customer buy?</h1>
+  <p>Enter a customer's details to get a purchase probability, the reasons behind it and a suggested next step.</p>
+</div>
+
+<div class="split">
+  <section>
+    <p class="chips-label">Try an example</p>
+    <div class="chips">
+      <button type="button" class="chip" data-age="38" data-gender="Male" data-income="70000" data-browsing_time="24" data-previous_purchase="Yes" data-num_visits="8">Engaged repeat buyer</button>
+      <button type="button" class="chip" data-age="36" data-gender="Female" data-income="60000" data-browsing_time="22" data-previous_purchase="No" data-num_visits="7">Undecided visitor</button>
+      <button type="button" class="chip" data-age="24" data-gender="Female" data-income="28000" data-browsing_time="8" data-previous_purchase="No" data-num_visits="3">Casual browser</button>
+    </div>
+
+    <form method="post" id="predict-form" class="card" novalidate>
+      <div class="grid">
+        <label>Age
+          <input type="number" name="age" min="10" max="100" required value="{{ values.get('age', '') }}" placeholder="28">
+        </label>
+        <label>Gender
+          <select name="gender">
+            {% for g in ['Male', 'Female'] %}<option {{ 'selected' if values.get('gender') == g }}>{{ g }}</option>{% endfor %}
+          </select>
+        </label>
+        <label>Annual income (₹)
+          <input type="number" name="income" min="0" step="100" required value="{{ values.get('income', '') }}" placeholder="50000">
+        </label>
+        <label>Browsing time (minutes)
+          <input type="number" name="browsing_time" min="0" step="0.1" required value="{{ values.get('browsing_time', '') }}" placeholder="20">
+        </label>
+        <label>Previous purchase
+          <select name="previous_purchase">
+            {% for p in ['Yes', 'No'] %}<option {{ 'selected' if values.get('previous_purchase') == p }}>{{ p }}</option>{% endfor %}
+          </select>
+        </label>
+        <label>Number of visits
+          <input type="number" name="num_visits" min="0" required value="{{ values.get('num_visits', '') }}" placeholder="6">
+        </label>
+      </div>
+      <button type="submit" class="btn">Predict purchase</button>
+    </form>
+    {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+  </section>
+
+  <section aria-live="polite">
+    {% if result %}
+    <div class="card result {{ 'yes' if result.likely else 'no' }}">
+      <div class="result-top">
+        <h2>{{ result.label }}</h2>
+        <span class="pill">{{ result.advice.tier }}</span>
+      </div>
+      <div class="meter" role="img" aria-label="Purchase probability {{ result.probability }} percent"><span style="width: {{ result.probability }}%"></span></div>
+      <p class="muted">{{ result.probability }}% probability of purchase</p>
+      <p class="seg"><strong>{{ result.segment.name }}</strong> segment · {{ result.segment.description }}</p>
+    </div>
+
+    <div class="card">
+      <h3>Why this prediction</h3>
+      <p class="muted small">Each bar shows how far this customer's value moves the probability compared with a typical customer, in percentage points.</p>
+      <ul class="impact">
+        {% for e in result.explain %}
+        <li>
+          <span class="f-name">{{ e.label }} <em>{{ e.value }}</em></span>
+          <span class="track"><i class="{{ 'pos' if e.impact >= 0 else 'neg' }}" style="width: {{ e.width }}%; {{ 'left: 50%' if e.impact >= 0 else 'right: 50%' }}"></i></span>
+          <span class="f-val {{ 'zero' if e.impact|abs < 0.05 else ('pos' if e.impact > 0 else 'neg') }}">{{ '0.0' if e.impact|abs < 0.05 else '%+.1f'|format(e.impact) }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Suggested next step</h3>
+      <p>{{ result.advice.action }}</p>
+      {% if result.advice.tips %}
+      <ul class="tips">{% for t in result.advice.tips %}<li>{{ t }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+    {% else %}
+    <div class="card placeholder">
+      <h3>Your result appears here</h3>
+      <p class="muted">You will see the probability, the factors that drove it, the customer's segment and a recommended action. Pick an example on the left to start quickly.</p>
+    </div>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.querySelectorAll(".chip").forEach(function (chip) {
+  chip.addEventListener("click", function () {
+    Object.keys(chip.dataset).forEach(function (key) {
+      var field = document.querySelector('[name="' + key + '"]');
+      if (field) field.value = chip.dataset[key];
+    });
+    document.getElementById("predict-form").requestSubmit();
+  });
+});
+</script>
+{% endblock %}
